@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Content-Type">
+</head>
+<body bgcolor="green">
+    <html>
+    <head>
+        <script>
+            function toggleButton()
+            {
+                var username = document.getElementById('username').value;
+                var surname = document.getElementById('surname').value;
+                var Email = document.getElementById('Email').value;
+                var password = document.getElementById('password').value;
+                var plus_password = document.getElementById('plus_password').value;
+ 
+                if (username && surname && Email && password && plus_password) {
+                    document.getElementById('submitButton').disabled = false;
+                    href="index.html"
+                } else {
+                    document.getElementById('submitButton').disabled = true;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <form action="index.html" method="post">
+                <table>
+                Имя:<input type="text" name="username" maxlength="20" id="username" onchange="toggleButton()">
+                Фамилия:<input type="surname" maxlength="20" name="surname" id="surname"  onchange="toggleButton()">
+                Отчество:<input type="none" maxlength="20">
+                <td>
+                Почта:<input type="text" name="Email" maxlength="300" id="Email" onchange="toggleButton()">
+                Пароль:<input type="password" minlength="10" maxlength="300" name="password" id="password"  onchange="toggleButton()">
+                Подтверждение пароля:<input type="plus_password" minlength="10" maxlength="300" name="plus_password" id="plus_password"  onchange="toggleButton()">
+                Дата рождения:<input type="date" id="date" name="date" max="2015-01-01" min="1900-01-01"/>
+                Пол:<select name="nubexSelect" size="3" multiple form="nubexForm">
+                    <option>Женский</option>
+                    <option>Мужской</option>
+                </select>
+                </td>
+                </table>
+                <input #index.html id="submitButton" type="submit" value="Войти" onClick="index.html" disabled/>
+            </form>
+        </div>
+    </body>
+</body>
+</html>
